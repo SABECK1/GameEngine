@@ -1,0 +1,44 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "untitled.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "untitled.tmx": {
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 216,
+                "y": 61
+            }
+        },
+        "untitled.tmx#Overworld_Tileset": {
+            "scaleInDock": 4
+        },
+        "untitled.tmx#water_tile_anim_strip_8": {
+            "scaleInDock": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/Samue/Desktop/Desktop Folder/VSCODE/C/GameEngine/tiles",
+    "last.imagePath": "C:/Users/Samue/Desktop/Desktop Folder/VSCODE/C/GameEngine/assets/Tiles_(animated)/Overworld",
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+        "untitled.tmx"
+    ],
+    "project": "sdl_tileset.tiled-project",
+    "recentFiles": [
+        "untitled.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

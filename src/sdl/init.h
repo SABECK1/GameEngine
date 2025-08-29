@@ -4,3 +4,4 @@
 #include "common.h"
 #include "../player.h"
 #include "properties.h"
+#include "../map.h"
