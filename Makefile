@@ -1,5 +1,6 @@
 CC=gcc
-SRC=./src/*.c
+SRC=./src/*.c \
+	./src/sdl/*.c
 OUT=./out/game.exe
 
 # Include directories

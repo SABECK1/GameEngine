@@ -60,6 +60,16 @@
   "files.associations": {
     "player.h": "c",
     "entity.h": "c",
-    "settings.h": "c"
+    "settings.h": "c",
+    "render.h": "c",
+    "update.h": "c",
+    "events.h": "c",
+    "iterate.h": "c",
+    "common.h": "c",
+    "sdl.h": "c",
+    "init.h": "c",
+    "quit.h": "c",
+    "properties.h": "c",
+    "sdl_main.h": "c"
   }
 }
