@@ -13,9 +13,9 @@
     entities[i].quit(); \
   } 
 
-#define UPDATE_ENTITIES(entities, entities_count) \
+#define UPDATE_ENTITIES(entities, entities_count, delta_time) \
   for (int i = 0; i < entities_count; i++) {    \
-    entities[i].update(); \
+    entities[i].update(delta_time); \
   } 
 
 #define RENDER_ENTITIES(entities, entities_count, renderer) \
@@ -27,6 +27,6 @@
 typedef struct {
   void (*quit)(void);
   void (*handle_events)(SDL_Event*);
-  void (*update)(void);
+  void (*update)(float);
   void (*render)(SDL_Renderer*);
 } Entity;
