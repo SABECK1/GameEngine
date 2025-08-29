@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:\\SDL\\x86_64-w64-mingw32\\include\\SDL3\\",
-                "C:/SDL/x86_64-w64-mingw32/include"
+                "C:/SDL/SDL/x86_64-w64-mingw32/include"
             ],
             "compilerPath": "C:/w64devkit/bin/gcc.exe",
             "cStandard": "${default}",

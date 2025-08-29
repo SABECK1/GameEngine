@@ -1,6 +1,22 @@
-compile: build run
+CC=gcc
+SRC=./src/main.c
+OUT=./out/game.exe
+
+# Include directories
+INCLUDES= \
+    -I"C:\SDL\SDL\x86_64-w64-mingw32\include" \
+    -I"C:\SDL\SDL IMAGE\x86_64-w64-mingw32\include"
+
+# Library directories and libraries
+LIBS= \
+    -L"C:\SDL\SDL\x86_64-w64-mingw32\lib" \
+    -L"C:\SDL\SDL IMAGE\x86_64-w64-mingw32\lib" \
+    -lSDL3 -lSDL3_image
+
+all: build run
 
 build:
-	gcc ./src/main.c -o ./out/game.exe -I "C:\SDL\x86_64-w64-mingw32\include" -L "C:\SDL\x86_64-w64-mingw32\lib" -lSDL3
+	$(CC) $(SRC) -o $(OUT) $(INCLUDES) $(LIBS)
+
 run:
-	./out/game.exe
+	$(OUT)
