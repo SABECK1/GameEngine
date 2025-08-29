@@ -1,5 +1,5 @@
 CC=gcc
-SRC=./src/main.c
+SRC=./src/*.c
 OUT=./out/game.exe
 
 # Include directories
