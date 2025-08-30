@@ -27,7 +27,6 @@
     entities[i].render(renderer); \
   } 
 
-
 typedef struct {
   void (*quit)(void);
   void (*handle_events)(SDL_Event*);
@@ -37,3 +36,9 @@ typedef struct {
 
 extern Entity entities[MAX_ENTITIES];
 extern int entities_count;
+
+void create_entity(Entity entity);
+
+void destroy_entity(int index);
+
+void swap_entities(int index1, int index2);

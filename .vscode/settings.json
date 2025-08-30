@@ -70,6 +70,10 @@
     "init.h": "c",
     "quit.h": "c",
     "properties.h": "c",
-    "sdl_main.h": "c"
+    "sdl_main.h": "c",
+    "camera.h": "c",
+    "sdl_image.h": "c",
+    "map.h": "c",
+    "cute_tiled.h": "c"
   }
 }

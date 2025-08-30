@@ -16,9 +16,12 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv)
         SDL_Log("Couldn't create window/renderer: %s", SDL_GetError());
         return SDL_APP_FAILURE;
     }
-    
-    entities[entities_count++] = init_map(state->renderer);
-    entities[entities_count++] = init_player(state->renderer);
+
+    init_camera(state->renderer);
+    init_map(state->renderer);
+    init_player(state->renderer);
+
+    SDL_SetRenderLogicalPresentation(state->renderer, LOGICAL_WIDTH, LOGICAL_HEIGHT, SDL_LOGICAL_PRESENTATION_LETTERBOX);
     
     return SDL_APP_CONTINUE;
 };

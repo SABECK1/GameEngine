@@ -1,7 +1,7 @@
 #define CUTE_TILED_IMPLEMENTATION
 #include "map.h"
 
-static cute_tiled_map_t* map;
+cute_tiled_map_t* map;
 static cute_tiled_layer_t* layer;
 static cute_tiled_tileset_t* tileset;
 static Texture* texture;
@@ -46,8 +46,8 @@ static void render(SDL_Renderer* renderer) {
         };
 
         SDL_FRect dst = {
-          j * map->tilewidth,
-          i * map->tileheight,
+          j * map->tilewidth - camera.x,
+          i * map->tileheight - camera.y,
           map->tilewidth,
           map->tileheight
         };
@@ -79,10 +79,12 @@ Entity init_map(SDL_Renderer* renderer) {
     current_texture->texture = IMG_LoadTexture(renderer, tileset->image.ptr);
     
     if (!current_texture->texture) {
-      SDL_Log("Error loading texture for tileset");
+      SDL_Log("Error loading texture for tileset %s", tileset->name.ptr);
     } else {
       SDL_Log("Texture loaded successfully");
     }
+
+    SDL_SetTextureScaleMode(current_texture->texture, SDL_SCALEMODE_NEAREST);
 
     current_texture->firstgid = tileset->firstgid;
     current_texture->tilecount = tileset->tilecount;
@@ -102,5 +104,5 @@ Entity init_map(SDL_Renderer* renderer) {
     .render = render,
   };
 
-  return map_e;
+  create_entity(map_e);
 }

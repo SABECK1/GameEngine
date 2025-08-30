@@ -7,5 +7,8 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event)
     {
         return SDL_APP_SUCCESS;
     }
+
+    HANDLE_EVENTS_ENTITIES(entities, entities_count, event);
+
     return SDL_APP_CONTINUE;
 };

@@ -5,3 +5,4 @@
 #include "../player.h"
 #include "properties.h"
 #include "../map.h"
+#include "../camera.h"
